@@ -8,12 +8,15 @@ public class EmployeeWageProg
 	{
 		int attendance, perDayWage=0,workedHours=0;
 		System.out.println("Welcome to Employee Wage Computation");
+		for(int day=1; day<=20; day++)
+		{
 		attendance=(int)Math.floor(Math.random()*10)%3;
+		System.out.print("Day "+day+",");
 		switch(attendance)
 		{
 			case IS_FULL_TIME: 
 			{
-				System.out.println("The Employee is present");
+				System.out.println(" The Employee is present");
 				workedHours=8;
 				perDayWage=WAGE_PER_HOUR*workedHours;
 				System.out.println("Employee wage is: "+ perDayWage);
@@ -21,7 +24,7 @@ public class EmployeeWageProg
 			}
 			case IS_PART_TIME: 
 			{
-				System.out.println("The Employee is present Half a day");
+				System.out.println(" The Employee is present Half a day");
 				workedHours=4;
 				perDayWage=WAGE_PER_HOUR*workedHours;
 				System.out.println("Employee wage is: "+ perDayWage);
@@ -29,10 +32,11 @@ public class EmployeeWageProg
 			}
 			default:
 			{
-				System.out.println("Employee is absent");
+				System.out.println(" Employee is absent");
 				workedHours=0;
 				break;
 			}
-		}	 
+		}
+		}
 	}
 }
