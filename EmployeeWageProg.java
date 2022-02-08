@@ -6,7 +6,7 @@ public class EmployeeWageProg
 //			public static final int MAX_WORKING_DAYS=20;
 //			public static final int MAX_WORKING_HOURS=100;
 		
-	public static int calcEmpWageForCompany(int wagePerHour, int maxDays,int maxHours)
+	public static int calcEmpWageForCompany(String company, int wagePerHour, int maxDays,int maxHours)
 	{
 		int attendance, perDayWage=0,workedHours=0,day=0;
 		int totalAttendance=0,totalWorkedHours=0;
@@ -50,12 +50,14 @@ public class EmployeeWageProg
 				System.out.println("Total worked hours: "+ totalWorkedHours);
 			}
 		int totalEmpWage= totalWorkedHours*wagePerHour;
-		System.out.println("Total earnings for the employee: "+ totalEmpWage);
+		System.out.println("Total earnings for the employee for the company : "+company+" is: "+ totalEmpWage);
 		
 		return totalEmpWage;
 	}
 	public static void main(String[] args)
 	{
-		int totalWage = calcEmpWageForCompany(20,2,10);
+		calcEmpWageForCompany("DMart",20,2,10);
+		calcEmpWageForCompany("Relaince",10,4,20);
+
 	}
 }
