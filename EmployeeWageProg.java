@@ -18,9 +18,8 @@ public class EmployeeWageProg
 	
 	private void calcEmpWage() {
 		for(int i = 0; i < numOfCompany; i++) {
-			int totalEmpWage = this.calcEmpWage(companyEmpWageArray[i]);
-			
-			System.out.println("Total earnings for the employee for the company : "+ companyEmpWageArray[i].company+" is: "+ totalEmpWage);
+			companyEmpWageArray[i].setTotalEmpPWage(this.calcEmpWage(companyEmpWageArray[i]));			
+			System.out.println(companyEmpWageArray[i]);
 		}
 	}
 	
